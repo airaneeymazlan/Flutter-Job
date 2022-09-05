@@ -106,7 +106,7 @@ class _SignUpState extends State<SignUp> {
                 keyboardType: TextInputType.text,
                 obscureText: true,
                 decoration: InputDecoration(
-                  hintText: "Confirm Password",
+                  hintText: "Confirm Password !!!",
                   hintStyle: TextStyle(
                       fontWeight: FontWeight.bold, letterSpacing: 1.8),
                   prefixIcon: Icon(
@@ -117,7 +117,7 @@ class _SignUpState extends State<SignUp> {
               ),
               SizedBox(
                 height: 20,
-              ), 
+              ),
             ],
           ),
         ),
