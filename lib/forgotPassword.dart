@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
+import 'package:sandbox/login.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -13,6 +13,18 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
+        appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.white,
+            leading: GestureDetector(
+              child: const Icon(
+                Icons.arrow_back_ios,
+                color: Colors.black,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            )),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Container(
@@ -22,9 +34,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 //mainAxisAlignment: MainAxisAlignment.center,
                 //crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  const SizedBox(
-                    height: 30,
-                  ),
                   const Align(
                     alignment: Alignment.topLeft,
                     child: Padding(

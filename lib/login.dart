@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:sandbox/Drawer/mainPage.dart';
 import 'package:sandbox/forgotPassword.dart';
-import 'package:sandbox/getStarted.dart';
 import 'package:sandbox/signUp.dart';
 
 class LoginScreen extends StatefulWidget {
   // ignore: use_function_type_syntax_for_parameters
-  //const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -90,48 +90,46 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 20,
                   ),
 
-                  //Forgot Password
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ForgotPassword()));
-                    },
-                    child: const Text(
-                      "Forgot Password?",
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Color(0xFF424242),
-                        //fontWeight: FontWeight.bold,
-                        //letterSpacing: 1.7
-                      ),
-                      //textAlign: TextAlign.left,
-                      //textAlign: TextAlign.center,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-
-                  //Remember Me
-                  Row(children: <Widget>[
-                    Theme(
-                      data: ThemeData(unselectedWidgetColor: Colors.black),
-                      child: Checkbox(
-                        value: isRememberMe,
-                        onChanged: (value) {
-                          setState(() {
-                            isRememberMe = value!;
-                          });
+                  //Single Row for Remember Me and Forgot Password
+                  Row(
+                    //MainAxisAlignment.spaceBetween : One at the left, One at the right
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Row(children: <Widget>[
+                        Theme(
+                          data: ThemeData(unselectedWidgetColor: Colors.black),
+                          child: Checkbox(
+                            value: isRememberMe,
+                            onChanged: (value) {
+                              setState(() {
+                                isRememberMe = value!;
+                              });
+                            },
+                          ),
+                        ),
+                        const Text(
+                          "Remember me",
+                          style: TextStyle(color: Color(0xFF424242)),
+                        ),
+                      ]),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ForgotPassword()));
                         },
+                        child: const Text(
+                          "Forgot Password?",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Color(0xFF424242),
+                          ),
+                        ),
                       ),
-                    ),
-                    const Text(
-                      "Remember me",
-                      style: TextStyle(color: Color(0xFF424242)),
-                    ),
-                  ]),
+                    ],
+                  ),
 
                   //Login Button
                   Column(
@@ -144,7 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => LoginScreen()));
+                                  builder: (context) => MainPage()));
                         },
                         color: const Color(0xFF000000),
                         shape: RoundedRectangleBorder(
@@ -162,7 +160,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
 
                   const SizedBox(
-                    height: 25,
+                    height: 28,
                   ),
 
                   InkWell(
@@ -172,7 +170,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         text: "Don't Have an Account?",
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -180,15 +178,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         text: " Sign Up",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 18,
+                            fontSize: 17,
                             fontWeight: FontWeight.bold),
                       ),
                     ])),
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignUp()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SignUp()));
                     },
                   ),
                 ],
