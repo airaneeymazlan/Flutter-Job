@@ -1,5 +1,3 @@
-//THIS IS THE INFO IN EACH CONTAINER
-
 import 'package:flutter/material.dart';
 import 'package:sandbox/activity/Home/job.dart';
 import 'package:sandbox/activity/Home/jobDetail.dart';
@@ -47,6 +45,9 @@ class JobItem extends StatelessWidget {
                                       position: job.position,
                                       time: job.time,
                                       high: job.high,
+                                      responsibilities: job.responsibilities,
+                                      skills: job.skills,
+                                      add: job.add,
                                     )));
                       },
                       child: Text(

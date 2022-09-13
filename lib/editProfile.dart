@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sandbox/Drawer/mainPage.dart';
+import 'package:sandbox/activity/profilePage.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -12,19 +14,23 @@ class _EditProfileState extends State<EditProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
-          ),
-          onPressed: () {},
-        ),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      //   elevation: 0,
+      //   leading: IconButton(
+      //     icon: const Icon(
+      //       Icons.arrow_back_ios,
+      //       color: Colors.black,
+      //     ),
+      //     onPressed: () {
+      //       Navigator.pop(
+      //           context, MaterialPageRoute(builder: (context) => MainPage()));
+      //     },
+      //   ),
+      // ),
       body: Container(
-        padding: EdgeInsets.all(16.0),
+        color: Colors.white,
+        padding: EdgeInsets.all(20.0),
         child: GestureDetector(
           onTap: () {
             FocusScope.of(context).unfocus();
@@ -33,7 +39,7 @@ class _EditProfileState extends State<EditProfile> {
             children: [
               const Text(
                 "Edit Profile",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               ),
               const SizedBox(
                 height: 15,
@@ -45,9 +51,7 @@ class _EditProfileState extends State<EditProfile> {
                       width: 130,
                       height: 130,
                       decoration: BoxDecoration(
-                          border: Border.all(
-                              width: 4,
-                              color: Theme.of(context).scaffoldBackgroundColor),
+                          border: Border.all(width: 4, color: Colors.orange),
                           boxShadow: [
                             BoxShadow(
                                 spreadRadius: 2,
@@ -71,13 +75,13 @@ class _EditProfileState extends State<EditProfile> {
                             shape: BoxShape.circle,
                             border: Border.all(
                               width: 4,
-                              color: Theme.of(context).scaffoldBackgroundColor,
+                              color: Colors.orange,
                             ),
-                            color: Colors.black,
+                            color: Colors.white,
                           ),
                           child: const Icon(
                             Icons.edit,
-                            color: Colors.white,
+                            color: Colors.grey,
                           ),
                         )),
                   ],
@@ -87,23 +91,26 @@ class _EditProfileState extends State<EditProfile> {
                 height: 35,
               ),
 
-              buildTextField("Full Name", "Nor Airaneey", false),
-              buildTextField("E-mail", "airaneeymazlan@gmail.com", false),
+              buildTextField("Full Name", "NOR AIRANEEY", false),
+              buildTextField("Gender", "FEMALE", false),
               // buildTextField("Password", "********", true),
-              buildTextField("Location", "Malaysia", false),
+              buildTextField("Date of Birth", "14 DEC 1999", false),
+              buildTextField("Location", "MALAYSIA", false),
+              buildTextField("Phone Number", "0143499070", false),
+              buildTextField("E-mail", "airaneeymazlan@gmail.com", false),
 
               const SizedBox(
                 height: 35,
               ),
 
-              //Cancel Button
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  OutlineButton(
-                    padding: const EdgeInsets.symmetric(horizontal: 50),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                  //Cancel Button
+                  OutlinedButton(
+                    // padding: const EdgeInsets.symmetric(horizontal: 50),
+                    // shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(20)),
                     onPressed: () {},
                     child: const Text("CANCEL",
                         style: TextStyle(
@@ -112,19 +119,22 @@ class _EditProfileState extends State<EditProfile> {
                             color: Colors.black)),
                   ),
                   //Save Button
-                  RaisedButton(
-                    onPressed: () {},
-                    color: Colors.black,
-                    padding: EdgeInsets.symmetric(horizontal: 50),
-                    elevation: 2,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                  ElevatedButton(
+                    // color: Colors.black,
+                    // padding: EdgeInsets.symmetric(horizontal: 50),
+                    // elevation: 2,
+                    // shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(20)),
                     child: const Text(
                       "SAVE",
                       style: TextStyle(
                           fontSize: 14,
                           letterSpacing: 2.2,
                           color: Colors.white),
+                    ),
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.black),
                     ),
                   ),
                 ],
@@ -162,7 +172,7 @@ class _EditProfileState extends State<EditProfile> {
             hintText: placeholder,
             hintStyle: const TextStyle(
               fontSize: 16,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w600,
               color: Colors.black,
             )),
       ),

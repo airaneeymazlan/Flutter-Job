@@ -25,16 +25,16 @@ class Job {
         ],
         [
           'Stay up-to-date with new technology trends',
-          'Gather specific requirements and suggest solutions',
-          'Troubleshoot and debug to optimize performance'
+          'Gather specific requirements ',
+          'Troubleshoot and debug'
         ],
         [
           'Fully flexible ',
           '5 days working per week',
         ],
         [
-          'Fully flexible ',
-          '5 days working per week',
+          'Year of Experience: 1 year ',
+          'Qualification: Diploma',
         ],
       ),
       Job('IT & Digital Internship Programme', false, 'Fulltime', 'MYR 3000', [
@@ -43,19 +43,20 @@ class Job {
         'We provide training for newcomers'
       ], [
         'Stay up-to-date with new technology trends',
-        'Gather specific requirements and suggest solutions',
-        'Troubleshoot and debug to optimize performance'
+        'Gather specific requirements ',
+        'Troubleshoot and debug '
       ], [
         'Fully flexible ',
         '5 days working per week',
       ], [
-        'Fully flexible ',
+        'Year of Experience: 1 year ',
+        'Qualification: Diploma',
       ]),
       Job(
         'IOS Mobile Developer',
         false,
         'Fulltime',
-        'MYR 1500 - 3000',
+        'MYR 1500 - MYR 3000',
         [
           'Performance driven organization',
           'Competitive salary and benefits',
@@ -63,8 +64,8 @@ class Job {
         ],
         [
           'Stay up-to-date with new technology trends',
-          'Gather specific requirements and suggest solutions',
-          'Troubleshoot and debug to optimize performance'
+          'Gather specific requirements ',
+          'Troubleshoot and debug '
         ],
         [
           'Fully flexible ',
@@ -87,16 +88,16 @@ class Job {
         ],
         [
           'Stay up-to-date with new technology trends',
-          'Gather specific requirements and suggest solutions',
-          'Troubleshoot and debug to optimize performance'
+          'Gather specific requirements ',
+          'Troubleshoot and debug '
         ],
         [
           'Fully flexible ',
           '5 days working per week',
         ],
         [
-          'Fully flexible ',
-          '5 days working per week',
+          'Year of Experience: 1 year ',
+          'Qualification: Diploma',
         ],
       ),
     ];

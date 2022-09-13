@@ -15,15 +15,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 10,
-              ),
+              // const SizedBox(
+              //   height: 10,
+              // ),
               const Text(
                 "Welcome home",
                 style: TextStyle(color: Colors.grey, fontSize: 15

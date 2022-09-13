@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sandbox/login.dart';
 
 class SignUp extends StatefulWidget {
-  // ignore: use_function_type_syntax_for_parameters
-  const SignUp({Key? key}) : super(key: key);
+  //const SignUp({Key? key}) : super(key: key);
 
   @override
   _SignUpState createState() => _SignUpState();

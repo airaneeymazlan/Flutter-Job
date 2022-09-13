@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sandbox/activity/homePage.dart';
+import 'package:sandbox/activity/Home/homePage.dart';
 
 class NavigationDrawer extends StatefulWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
 
 Widget HeaderDrawer() {
   return Container(
-    color: Colors.black,
+    color: Colors.orange,
     width: double.infinity,
     height: 200,
     padding: EdgeInsets.only(top: 20.0),
@@ -35,14 +35,18 @@ Widget HeaderDrawer() {
           margin: EdgeInsets.only(bottom: 10),
           height: 50,
           decoration: const BoxDecoration(
+            color: Colors.white,
             shape: BoxShape.circle,
-            image: DecorationImage(
-              image: AssetImage('assets/logo.png'),
-            ),
+            // image: DecorationImage(
+            //   image: AssetImage('assets/logo.png'),
+            // ),
           ),
         ),
+        SizedBox(
+          height: 10,
+        ),
         const Text(
-          "Username",
+          "AIRANEEY",
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),
       ],
@@ -74,35 +78,35 @@ Widget menuItem() => Column(
           onTap: () {},
         ),
         ListTile(
-          leading: const Icon(Icons.dashboard_outlined),
-          iconColor: Colors.black,
-          title: const Text('Dashboard'),
-          onTap: () {},
-        ),
-        ListTile(
           leading: const Icon(Icons.favorite_outline_outlined),
           iconColor: Colors.black,
-          title: const Text('Favorites'),
+          title: const Text('Favourites'),
           onTap: () {},
         ),
         ListTile(
-          leading: const Icon(Icons.category_outlined),
+          leading: const Icon(Icons.dashboard_outlined),
           iconColor: Colors.black,
-          title: const Text('Categories'),
+          title: const Text('General'),
           onTap: () {},
         ),
-        ListTile(
-          leading: const Icon(Icons.search_outlined),
-          iconColor: Colors.black,
-          title: const Text('Search'),
-          onTap: () {},
-        ),
-        ListTile(
-          leading: const Icon(Icons.people_outline),
-          iconColor: Colors.black,
-          title: const Text('Freelancer'),
-          onTap: () {},
-        ),
+        // ListTile(
+        //   leading: const Icon(Icons.category_outlined),
+        //   iconColor: Colors.black,
+        //   title: const Text('Categories'),
+        //   onTap: () {},
+        // ),
+        // ListTile(
+        //   leading: const Icon(Icons.search_outlined),
+        //   iconColor: Colors.black,
+        //   title: const Text('Search'),
+        //   onTap: () {},
+        // ),
+        // ListTile(
+        //   leading: const Icon(Icons.people_outline),
+        //   iconColor: Colors.black,
+        //   title: const Text('Freelancer'),
+        //   onTap: () {},
+        // ),
         ListTile(
           leading: const Icon(Icons.logout_outlined),
           iconColor: Colors.black,

@@ -12,7 +12,6 @@ class JobList extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             padding: EdgeInsets.all(10),
-
             //padding: const EdgeInsets.symmetric(horizontal: 25),
             scrollDirection: Axis.vertical, // Scroll vertical OR horizontal
             itemBuilder: (context, index) => JobItem(jobList[index]),
