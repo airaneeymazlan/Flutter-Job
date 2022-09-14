@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:sandbox/Drawer/mainPage.dart';
 import 'package:sandbox/activity/profilePage.dart';
@@ -11,23 +12,10 @@ class EditProfile extends StatefulWidget {
 
 class _EditProfileState extends State<EditProfile> {
   bool showPassword = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      //   elevation: 0,
-      //   leading: IconButton(
-      //     icon: const Icon(
-      //       Icons.arrow_back_ios,
-      //       color: Colors.black,
-      //     ),
-      //     onPressed: () {
-      //       Navigator.pop(
-      //           context, MaterialPageRoute(builder: (context) => MainPage()));
-      //     },
-      //   ),
-      // ),
       body: Container(
         color: Colors.white,
         padding: EdgeInsets.all(20.0),
@@ -44,49 +32,98 @@ class _EditProfileState extends State<EditProfile> {
               const SizedBox(
                 height: 15,
               ),
-              Center(
-                child: Stack(
-                  children: [
-                    Container(
-                      width: 130,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          border: Border.all(width: 4, color: Colors.orange),
-                          boxShadow: [
-                            BoxShadow(
-                                spreadRadius: 2,
-                                blurRadius: 10,
-                                color: Colors.black.withOpacity(0.1),
-                                offset: const Offset(0, 10))
-                          ],
-                          shape: BoxShape.circle,
-                          image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(""),
-                          )),
-                    ),
-                    Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
+
+              //test
+              GestureDetector(
+                child: Center(
+                  child: Stack(
+                    children: [
+                      Container(
+                        width: 130,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 4, color: Colors.orange),
+                            boxShadow: [
+                              BoxShadow(
+                                  spreadRadius: 2,
+                                  blurRadius: 10,
+                                  color: Colors.black.withOpacity(0.1),
+                                  offset: const Offset(0, 10))
+                            ],
                             shape: BoxShape.circle,
-                            border: Border.all(
-                              width: 4,
-                              color: Colors.orange,
+                            image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(""),
+                            )),
+                      ),
+                      Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                width: 4,
+                                color: Colors.orange,
+                              ),
+                              color: Colors.white,
                             ),
-                            color: Colors.white,
-                          ),
-                          child: const Icon(
-                            Icons.edit,
-                            color: Colors.grey,
-                          ),
-                        )),
-                  ],
+                            child: const Icon(
+                              Icons.edit,
+                              color: Colors.grey,
+                            ),
+                          )),
+                    ],
+                  ),
                 ),
               ),
+
+              // //Upload Profile Picture
+              // Center(
+              //   child: Stack(
+              //     children: [
+              //       Container(
+              //         width: 130,
+              //         height: 130,
+              //         decoration: BoxDecoration(
+              //             border: Border.all(width: 4, color: Colors.orange),
+              //             boxShadow: [
+              //               BoxShadow(
+              //                   spreadRadius: 2,
+              //                   blurRadius: 10,
+              //                   color: Colors.black.withOpacity(0.1),
+              //                   offset: const Offset(0, 10))
+              //             ],
+              //             shape: BoxShape.circle,
+              //             image: const DecorationImage(
+              //               fit: BoxFit.cover,
+              //               image: NetworkImage(""),
+              //             )),
+              //       ),
+              //       Positioned(
+              //           bottom: 0,
+              //           right: 0,
+              //           child: Container(
+              //             height: 40,
+              //             width: 40,
+              //             decoration: BoxDecoration(
+              //               shape: BoxShape.circle,
+              //               border: Border.all(
+              //                 width: 4,
+              //                 color: Colors.orange,
+              //               ),
+              //               color: Colors.white,
+              //             ),
+              //             child: const Icon(
+              //               Icons.edit,
+              //               color: Colors.grey,
+              //             ),
+              //           )),
+              //     ],
+              //   ),
+              // ),
               const SizedBox(
                 height: 35,
               ),

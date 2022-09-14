@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sandbox/Drawer/mainPage.dart';
 import 'package:sandbox/activity/Home/applyJob.dart';
-import 'package:sandbox/activity/Status/statusPage.dart';
 
 class FileUpload extends StatefulWidget {
   const FileUpload({Key? key}) : super(key: key);
