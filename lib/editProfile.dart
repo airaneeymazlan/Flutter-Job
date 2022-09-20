@@ -33,7 +33,6 @@ class _EditProfileState extends State<EditProfile> {
                 height: 15,
               ),
 
-              //test
               GestureDetector(
                 child: Center(
                   child: Stack(

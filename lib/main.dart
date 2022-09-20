@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sandbox/login.dart';
+import 'package:sandbox/signUp.dart';
 import 'package:sandbox/splashScreen.dart';
 
 void main() {
@@ -15,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
-      home: SplashScreen(),
+      home: LoginScreen(),
+      // home: SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

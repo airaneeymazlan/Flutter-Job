@@ -32,7 +32,7 @@ class _FileUploadState extends State<FileUpload>
     }
     loadingController.forward();
   }
-
+ 
   @override
   void initState() {
     loadingController = AnimationController(

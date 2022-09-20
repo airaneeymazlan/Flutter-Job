@@ -15,181 +15,222 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-            elevation: 0,
-            backgroundColor: Colors.white,
-            leading: GestureDetector(
-              child: const Icon(
-                Icons.arrow_back_ios,
-                color: Colors.black,
-              ),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            )),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Container(
-              padding: const EdgeInsets.all(16.0),
-              //alignment:
-              child: Column(
-                //mainAxisAlignment: MainAxisAlignment.center,
-                //crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  const Align(
-                    alignment: Alignment.topLeft,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text("Sign Up",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.bold,
-                          )),
+      backgroundColor: Colors.orange,
+      // appBar: AppBar(
+      //     elevation: 0,
+      //     backgroundColor: Colors.orange,
+      //     leading: GestureDetector(
+      //       child: const Icon(
+      //         Icons.arrow_back_ios,
+      //         color: Colors.white,
+      //       ),
+      //       onTap: () {
+      //         Navigator.pop(context);
+      //       },
+      //     )),
+      body: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+            //color: Colors.orange
+            ),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 70,
+            ),
+            //Image of logo
+            Expanded(
+              child: Container(
+                decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(60),
+                      topRight: Radius.circular(60),
+                    )),
+                padding: EdgeInsets.all(30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // const SizedBox(
+                    //   height: 2,
+                    // ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  /*Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Image.asset(
-                      "assets/logo.png",
-                      height: 80,
-                    ),
-                  ),*/
-                  const SizedBox(
-                    height: 20,
-                  ),
-
-                  //Name
-                  const TextField(
-                      textAlign: TextAlign.left,
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                        hintText: "Name",
-                        hintStyle: TextStyle(
-                            fontWeight: FontWeight.bold, letterSpacing: 1.8),
-                        prefixIcon: Icon(
-                          Icons.account_circle,
+                    const Text(
+                      'Create an Account',
+                      style: TextStyle(
                           color: Colors.black,
-                        ),
-                      )),
-                  const SizedBox(
-                    height: 10,
-                  ),
-
-                  //Email
-                  const TextField(
-                      textAlign: TextAlign.left,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    const Text(
+                      'Create an account to apply the jobs',
+                      style: TextStyle(color: Colors.grey, fontSize: 14),
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    //Full Name
+                    const Text(
+                      'Full Name',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
-                        hintText: "Email",
-                        hintStyle: TextStyle(
-                            fontWeight: FontWeight.bold, letterSpacing: 1.8),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        contentPadding: EdgeInsets.symmetric(vertical: 18),
+                        prefixIcon: Icon(
+                          Icons.person,
+                          color: Colors.grey,
+                        ),
+                        hintText: "Full Name",
+                        labelStyle: TextStyle(color: Colors.grey),
+                        filled: true,
+                        floatingLabelBehavior: FloatingLabelBehavior.never,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    //Email
+                    const Text(
+                      'Email',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        contentPadding: EdgeInsets.symmetric(vertical: 18),
                         prefixIcon: Icon(
                           Icons.email,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
-                      )),
-                  const SizedBox(
-                    height: 10,
-                  ),
-
-                  //Password
-                  const TextField(
-                    textAlign: TextAlign.left,
-                    keyboardType: TextInputType.text,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: "Password",
-                      hintStyle: TextStyle(
-                          fontWeight: FontWeight.bold, letterSpacing: 1.8),
-                      prefixIcon: Icon(
-                        Icons.lock,
-                        color: Colors.black,
+                        hintText: "Email",
+                        labelStyle: TextStyle(color: Colors.grey),
+                        filled: true,
+                        floatingLabelBehavior: FloatingLabelBehavior.never,
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-
-                  //Confirm Password
-                  const TextField(
-                    textAlign: TextAlign.left,
-                    keyboardType: TextInputType.text,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      hintText: "Confirm Password",
-                      hintStyle: TextStyle(
-                          fontWeight: FontWeight.bold, letterSpacing: 1.8),
-                      prefixIcon: Icon(
-                        Icons.lock,
-                        color: Colors.black,
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    //Password
+                    const Text(
+                      'Password',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        contentPadding: EdgeInsets.symmetric(vertical: 18),
+                        prefixIcon: const Icon(
+                          Icons.lock,
+                          color: Colors.grey,
+                        ),
+                        hintText: "Password",
+                        labelStyle: TextStyle(color: Colors.grey),
+                        filled: true,
+                        floatingLabelBehavior: FloatingLabelBehavior.never,
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 25,
-                  ),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    //Confirm Password
+                    const Text(
+                      'Confirm Password',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        contentPadding: EdgeInsets.symmetric(vertical: 18),
+                        prefixIcon: const Icon(
+                          Icons.lock,
+                          color: Colors.grey,
+                        ),
+                        hintText: "Confirm Password",
+                        labelStyle: TextStyle(color: Colors.grey),
+                        filled: true,
+                        floatingLabelBehavior: FloatingLabelBehavior.never,
+                      ),
+                    ),
 
-                  //Reset Button
-                  Column(
-                    children: [
-                      const SizedBox(height: 20),
-                      MaterialButton(
-                        minWidth: double.infinity,
-                        height: 60,
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => LoginScreen()));
-                        },
-                        color: const Color(0xFF000000),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: const Text(
-                          "Reset Password",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 18,
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Column(
+                      children: [
+                        const SizedBox(height: 20),
+                        MaterialButton(
+                          minWidth: double.infinity,
+                          height: 60,
+                          onPressed: () async {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const LoginScreen()));
+                          },
+                          color: const Color(0xFF000000),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          child: const Text(
+                            "Sign up",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
-                      )
-                    ],
-                  ),
-
-                  const SizedBox(
-                    height: 25,
-                  ),
-
-                  InkWell(
-                    child: RichText(
-                        text: const TextSpan(children: [
-                      TextSpan(
-                        text: "Login?",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ])),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
-                    },
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ));
+          ],
+        ),
+      ),
+    );
   }
 }

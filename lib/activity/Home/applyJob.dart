@@ -33,6 +33,7 @@ class _ApplyJobState extends State<ApplyJob> {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 const Text('Register Details',
                     style: TextStyle(
@@ -52,10 +53,6 @@ class _ApplyJobState extends State<ApplyJob> {
                 const TextField(
                   textAlign: TextAlign.left,
                   keyboardType: TextInputType.text,
-                  // decoration: InputDecoration(
-                  //   hintText: "Name",
-                  //   hintStyle: TextStyle(fontSize: 12),
-                  // ),
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     //labelText: 'Name,
